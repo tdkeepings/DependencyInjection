@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{20DA3477-234A-4F8F-996F-4E49DF37D557}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{D27499B7-E1A3-4E2B-B14F-620560BB739E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{2F19C154-C744-4D53-ACE6-BAF7C8304801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{FE8FFB31-8E9B-4C4A-A1DC-F205F0FBE322}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F9ABFACD-529E-40D7-B549-996BA403283E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Tests", "Services.Tests\Services.Tests.csproj", "{89049A01-EFEB-496B-BA69-12CBAB6FE590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{6AE69E4A-49C3-4D24-835E-D86347E92B4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{C042D5F2-F93B-4E35-8550-C943E4D6A67B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +23,35 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20DA3477-234A-4F8F-996F-4E49DF37D557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20DA3477-234A-4F8F-996F-4E49DF37D557}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20DA3477-234A-4F8F-996F-4E49DF37D557}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20DA3477-234A-4F8F-996F-4E49DF37D557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D27499B7-E1A3-4E2B-B14F-620560BB739E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27499B7-E1A3-4E2B-B14F-620560BB739E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27499B7-E1A3-4E2B-B14F-620560BB739E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27499B7-E1A3-4E2B-B14F-620560BB739E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F19C154-C744-4D53-ACE6-BAF7C8304801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F19C154-C744-4D53-ACE6-BAF7C8304801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F19C154-C744-4D53-ACE6-BAF7C8304801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F19C154-C744-4D53-ACE6-BAF7C8304801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8FFB31-8E9B-4C4A-A1DC-F205F0FBE322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8FFB31-8E9B-4C4A-A1DC-F205F0FBE322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8FFB31-8E9B-4C4A-A1DC-F205F0FBE322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8FFB31-8E9B-4C4A-A1DC-F205F0FBE322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89049A01-EFEB-496B-BA69-12CBAB6FE590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89049A01-EFEB-496B-BA69-12CBAB6FE590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89049A01-EFEB-496B-BA69-12CBAB6FE590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89049A01-EFEB-496B-BA69-12CBAB6FE590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE69E4A-49C3-4D24-835E-D86347E92B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE69E4A-49C3-4D24-835E-D86347E92B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE69E4A-49C3-4D24-835E-D86347E92B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE69E4A-49C3-4D24-835E-D86347E92B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C042D5F2-F93B-4E35-8550-C943E4D6A67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C042D5F2-F93B-4E35-8550-C943E4D6A67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C042D5F2-F93B-4E35-8550-C943E4D6A67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C042D5F2-F93B-4E35-8550-C943E4D6A67B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{89049A01-EFEB-496B-BA69-12CBAB6FE590} = {F9ABFACD-529E-40D7-B549-996BA403283E}
 	EndGlobalSection
 EndGlobal
