@@ -11,8 +11,8 @@ namespace Persistance {
     //
     // TEntity is placeholder for any type that you want to instanciate this interface with.
     // For an example of this, go to SchoolPersistance.cs and look at the class declaration
-    interface IPersistable<TEntity> {
-        IEnumerable<TEntity> Data { get; set; }
+    public interface IPersistable<TEntity> {
+        TEntity Data { get; set; }
         int Save();
     }
 }

@@ -1,41 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using Models;
+using System.Linq;
 
 namespace Persistance {
     // An alternative way that SchoolPersistance could be defined.
     public class SchoolDbPersistance : IPersistable<School> {
         private IDbContext<School> schoolContext;
-        private IEnumerable<School> schools;
+        private School school;
 
         // This is instanciatable with either "MyDbContext" or "MyOtherContext"
         // The code for which is at the bottom of this file.
         public SchoolDbPersistance(IDbContext<School> _context) {
             schoolContext = _context;
-            schools = schoolContext.GetAll();
+            school = schoolContext.GetAll().First();
         }
 
-        public IEnumerable<School> Data {
+        public School Data {
             get {
-                return schools;
+                return school;
             }
 
             set {
-                schools = value;
+                school = value;
             }
         }
 
         public int Save() {
-            return schoolContext.Save(Data);
+            return schoolContext.Save();
         }
     }
-
-
 
     #region Boilerplate code to get the above working, completely throw away code
     public interface IDbContext<TEntity> {
         IEnumerable<TEntity> GetAll();
-        int Save(IEnumerable<TEntity> data);
+        int Save();
     }
 
     // An implementation of the IDbContext. This could exist along with several other imeplementations,
@@ -43,9 +42,20 @@ namespace Persistance {
     // the parameter. 
     public class MyDbContext : IDbContext<School> {
         public IEnumerable<School> GetAll() {
-            return new List<School>();
+            return new List<School>() {
+                new School() {
+                    Name = "Seconday school",
+                    Students = new List<Student>() {
+                        new Student() {
+                            Name = "Dennis the Menace",
+                            DateOfBirth = new DateTime(1960, 2, 25)
+                        }
+                        
+                    }
+                }
+            };
         }
-        public int Save(IEnumerable<School> data) {
+        public int Save() {
             // save the data somewhere special, like a database using a stored procedure
             // then return a sensible status code, say 1 is Success
             return 1;
@@ -56,7 +66,7 @@ namespace Persistance {
         public IEnumerable<School> GetAll() {
             return new List<School>();
         }
-        public int Save(IEnumerable<School> data) {
+        public int Save() {
             // save the data somewhere special, like a database using a stored procedure
             // then return a sensible status code, say 1 is Success
             return 1;

@@ -4,5 +4,9 @@ namespace Models {
     public class School {
         public string Name { get; set; }
         public IEnumerable<Student> Students { get; set; }
+
+        public School() {
+            Students = new List<Student>();
+        }
     }
 }
